@@ -1,0 +1,402 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={CodeBook},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{CodeBook}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\hypertarget{mean_and_std.csv-by_activity_subject.csv}{%
+\section{mean\_and\_std.csv /
+by\_activity\_subject.csv}\label{mean_and_std.csv-by_activity_subject.csv}}
+
+\hypertarget{mean_and_std.csv}{%
+\subsection{\texorpdfstring{mean\_and\_std.csv}{mean\_and\_std.csv  }}\label{mean_and_std.csv}}
+
+\hypertarget{activity}{%
+\paragraph{activity}\label{activity}}
+
+\hypertarget{activity-performed-by-each-subject}{%
+\subparagraph{`activity performed by each
+subject'}\label{activity-performed-by-each-subject}}
+
+\begin{itemize}
+\tightlist
+\item
+  STANDING\\
+\item
+  SITTING\\
+\item
+  LAYING\\
+\item
+  WALKING\\
+\item
+  WALKING\_DOWNSTAIRS\\
+\item
+  WALKING\_UPSTAIRS
+\end{itemize}
+
+\hypertarget{subject}{%
+\paragraph{subject}\label{subject}}
+
+\hypertarget{subject-id}{%
+\subparagraph{`subject ID'}\label{subject-id}}
+
+\begin{itemize}
+\tightlist
+\item
+  1\textasciitilde30
+\end{itemize}
+
+\hypertarget{the-following-variables-are-named-by-several-fixed-rule.}{%
+\paragraph{The following variables are named by several fixed
+rule.}\label{the-following-variables-are-named-by-several-fixed-rule.}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  prefix `t' means the variable is `time domain signal', `f' means
+  `frequency domain signal'
+\item
+  the values of variables come from the accelerometer and gyroscope
+  3-axial raw signals so all variables below separated into `Acc' or
+  `Gyro'. `Acc' means accelerometer and `Gyro' means `gyroscope'
+\item
+  the acceleration signal was then separated into body and gravity
+  acceleration signals.
+\item
+  the accelerometer and gyroscope signal is 3-axial raw signals(XYZ) and
+  X, Y, Z each means `X-axial', `Y-axial', `Z-axial'
+\item
+  In the case when variable has `Jerk', it literally means `Jerk
+  signal'.
+\item
+  In the case when variable has `Mag', it means `the magnitude of that
+  variable'
+\item
+  `mean' means `mean value of that variable', `std' means `standard
+  deviation value'
+\end{enumerate}
+
+So, for example, `tBodyGyroJerk-mean-X' means `X-axial mean value of
+Body jerk from gyroscope in time domain.'
+
+And all the values of variables are normalized and bounded within
+{[}-1,1{]} The following is the list of the rest of variables in this
+data that are named in this way.
+
+\hypertarget{tbodyacc-mean-x}{%
+\paragraph{tBodyAcc-mean-X}\label{tbodyacc-mean-x}}
+
+\hypertarget{tbodyacc-mean-y}{%
+\paragraph{tBodyAcc-mean-Y}\label{tbodyacc-mean-y}}
+
+\hypertarget{tbodyacc-mean-z}{%
+\paragraph{tBodyAcc-mean-Z}\label{tbodyacc-mean-z}}
+
+\hypertarget{tbodyacc-std-x}{%
+\paragraph{tBodyAcc-std-X}\label{tbodyacc-std-x}}
+
+\hypertarget{tbodyacc-std-y}{%
+\paragraph{tBodyAcc-std-Y}\label{tbodyacc-std-y}}
+
+\hypertarget{tbodyacc-std-z}{%
+\paragraph{tBodyAcc-std-Z}\label{tbodyacc-std-z}}
+
+\hypertarget{tgravityacc-mean-x}{%
+\paragraph{tGravityAcc-mean-X}\label{tgravityacc-mean-x}}
+
+\hypertarget{tgravityacc-mean-y}{%
+\paragraph{tGravityAcc-mean-Y}\label{tgravityacc-mean-y}}
+
+\hypertarget{tgravityacc-mean-z}{%
+\paragraph{tGravityAcc-mean-Z}\label{tgravityacc-mean-z}}
+
+\hypertarget{tgravityacc-std-x}{%
+\paragraph{tGravityAcc-std-X}\label{tgravityacc-std-x}}
+
+\hypertarget{tgravityacc-std-y}{%
+\paragraph{tGravityAcc-std-Y}\label{tgravityacc-std-y}}
+
+\hypertarget{tgravityacc-std-z}{%
+\paragraph{tGravityAcc-std-Z}\label{tgravityacc-std-z}}
+
+\hypertarget{tbodyaccjerk-mean-x}{%
+\paragraph{tBodyAccJerk-mean-X}\label{tbodyaccjerk-mean-x}}
+
+\hypertarget{tbodyaccjerk-mean-y}{%
+\paragraph{tBodyAccJerk-mean-Y}\label{tbodyaccjerk-mean-y}}
+
+\hypertarget{tbodyaccjerk-mean-z}{%
+\paragraph{tBodyAccJerk-mean-Z}\label{tbodyaccjerk-mean-z}}
+
+\hypertarget{tbodyaccjerk-std-x}{%
+\paragraph{tBodyAccJerk-std-X}\label{tbodyaccjerk-std-x}}
+
+\hypertarget{tbodyaccjerk-std-y}{%
+\paragraph{tBodyAccJerk-std-Y}\label{tbodyaccjerk-std-y}}
+
+\hypertarget{tbodyaccjerk-std-z}{%
+\paragraph{tBodyAccJerk-std-Z}\label{tbodyaccjerk-std-z}}
+
+\hypertarget{tbodygyro-mean-x}{%
+\paragraph{tBodyGyro-mean-X}\label{tbodygyro-mean-x}}
+
+\hypertarget{tbodygyro-mean-y}{%
+\paragraph{tBodyGyro-mean-Y}\label{tbodygyro-mean-y}}
+
+\hypertarget{tbodygyro-mean-z}{%
+\paragraph{tBodyGyro-mean-Z}\label{tbodygyro-mean-z}}
+
+\hypertarget{tbodygyro-std-x}{%
+\paragraph{tBodyGyro-std-X}\label{tbodygyro-std-x}}
+
+\hypertarget{tbodygyro-std-y}{%
+\paragraph{tBodyGyro-std-Y}\label{tbodygyro-std-y}}
+
+\hypertarget{tbodygyro-std-z}{%
+\paragraph{tBodyGyro-std-Z}\label{tbodygyro-std-z}}
+
+\hypertarget{tbodygyrojerk-mean-x}{%
+\paragraph{tBodyGyroJerk-mean-X}\label{tbodygyrojerk-mean-x}}
+
+\hypertarget{tbodygyrojerk-mean-y}{%
+\paragraph{tBodyGyroJerk-mean-Y}\label{tbodygyrojerk-mean-y}}
+
+\hypertarget{tbodygyrojerk-mean-z}{%
+\paragraph{tBodyGyroJerk-mean-Z}\label{tbodygyrojerk-mean-z}}
+
+\hypertarget{tbodygyrojerk-std-x}{%
+\paragraph{tBodyGyroJerk-std-X}\label{tbodygyrojerk-std-x}}
+
+\hypertarget{tbodygyrojerk-std-y}{%
+\paragraph{tBodyGyroJerk-std-Y}\label{tbodygyrojerk-std-y}}
+
+\hypertarget{tbodygyrojerk-std-z}{%
+\paragraph{tBodyGyroJerk-std-Z}\label{tbodygyrojerk-std-z}}
+
+\hypertarget{tbodyaccmag-mean}{%
+\paragraph{tBodyAccMag-mean()}\label{tbodyaccmag-mean}}
+
+\hypertarget{tbodyaccmag-std}{%
+\paragraph{tBodyAccMag-std()}\label{tbodyaccmag-std}}
+
+\hypertarget{tgravityaccmag-mean}{%
+\paragraph{tGravityAccMag-mean()}\label{tgravityaccmag-mean}}
+
+\hypertarget{tgravityaccmag-std}{%
+\paragraph{tGravityAccMag-std()}\label{tgravityaccmag-std}}
+
+\hypertarget{tbodyaccjerkmag-mean}{%
+\paragraph{tBodyAccJerkMag-mean()}\label{tbodyaccjerkmag-mean}}
+
+\hypertarget{tbodyaccjerkmag-std}{%
+\paragraph{tBodyAccJerkMag-std()}\label{tbodyaccjerkmag-std}}
+
+\hypertarget{tbodygyromag-mean}{%
+\paragraph{tBodyGyroMag-mean()}\label{tbodygyromag-mean}}
+
+\hypertarget{tbodygyromag-std}{%
+\paragraph{tBodyGyroMag-std()}\label{tbodygyromag-std}}
+
+\hypertarget{tbodygyrojerkmag-mean}{%
+\paragraph{tBodyGyroJerkMag-mean()}\label{tbodygyrojerkmag-mean}}
+
+\hypertarget{tbodygyrojerkmag-std}{%
+\paragraph{tBodyGyroJerkMag-std()}\label{tbodygyrojerkmag-std}}
+
+\hypertarget{fbodyacc-mean-x}{%
+\paragraph{fBodyAcc-mean-X}\label{fbodyacc-mean-x}}
+
+\hypertarget{fbodyacc-mean-y}{%
+\paragraph{fBodyAcc-mean-Y}\label{fbodyacc-mean-y}}
+
+\hypertarget{fbodyacc-mean-z}{%
+\paragraph{fBodyAcc-mean-Z}\label{fbodyacc-mean-z}}
+
+\hypertarget{fbodyacc-std-x}{%
+\paragraph{fBodyAcc-std-X}\label{fbodyacc-std-x}}
+
+\hypertarget{fbodyacc-std-y}{%
+\paragraph{fBodyAcc-std-Y}\label{fbodyacc-std-y}}
+
+\hypertarget{fbodyacc-std-z}{%
+\paragraph{fBodyAcc-std-Z}\label{fbodyacc-std-z}}
+
+\hypertarget{fbodyacc-meanfreq-x}{%
+\paragraph{fBodyAcc-meanFreq-X}\label{fbodyacc-meanfreq-x}}
+
+\hypertarget{fbodyacc-meanfreq-y}{%
+\paragraph{fBodyAcc-meanFreq-Y}\label{fbodyacc-meanfreq-y}}
+
+\hypertarget{fbodyacc-meanfreq-z}{%
+\paragraph{fBodyAcc-meanFreq-Z}\label{fbodyacc-meanfreq-z}}
+
+\hypertarget{fbodyaccjerk-mean-x}{%
+\paragraph{fBodyAccJerk-mean-X}\label{fbodyaccjerk-mean-x}}
+
+\hypertarget{fbodyaccjerk-mean-y}{%
+\paragraph{fBodyAccJerk-mean-Y}\label{fbodyaccjerk-mean-y}}
+
+\hypertarget{fbodyaccjerk-mean-z}{%
+\paragraph{fBodyAccJerk-mean-Z}\label{fbodyaccjerk-mean-z}}
+
+\hypertarget{fbodyaccjerk-std-x}{%
+\paragraph{fBodyAccJerk-std-X}\label{fbodyaccjerk-std-x}}
+
+\hypertarget{fbodyaccjerk-std-y}{%
+\paragraph{fBodyAccJerk-std-Y}\label{fbodyaccjerk-std-y}}
+
+\hypertarget{fbodyaccjerk-std-z}{%
+\paragraph{fBodyAccJerk-std-Z}\label{fbodyaccjerk-std-z}}
+
+\hypertarget{fbodyaccjerk-meanfreq-x}{%
+\paragraph{fBodyAccJerk-meanFreq-X}\label{fbodyaccjerk-meanfreq-x}}
+
+\hypertarget{fbodyaccjerk-meanfreq-y}{%
+\paragraph{fBodyAccJerk-meanFreq-Y}\label{fbodyaccjerk-meanfreq-y}}
+
+\hypertarget{fbodyaccjerk-meanfreq-z}{%
+\paragraph{fBodyAccJerk-meanFreq-Z}\label{fbodyaccjerk-meanfreq-z}}
+
+\hypertarget{fbodygyro-mean-x}{%
+\paragraph{fBodyGyro-mean-X}\label{fbodygyro-mean-x}}
+
+\hypertarget{fbodygyro-mean-y}{%
+\paragraph{fBodyGyro-mean-Y}\label{fbodygyro-mean-y}}
+
+\hypertarget{fbodygyro-mean-z}{%
+\paragraph{fBodyGyro-mean-Z}\label{fbodygyro-mean-z}}
+
+\hypertarget{fbodygyro-std-x}{%
+\paragraph{fBodyGyro-std-X}\label{fbodygyro-std-x}}
+
+\hypertarget{fbodygyro-std-y}{%
+\paragraph{fBodyGyro-std-Y}\label{fbodygyro-std-y}}
+
+\hypertarget{fbodygyro-std-z}{%
+\paragraph{fBodyGyro-std-Z}\label{fbodygyro-std-z}}
+
+\hypertarget{fbodygyro-meanfreq-x}{%
+\paragraph{fBodyGyro-meanFreq-X}\label{fbodygyro-meanfreq-x}}
+
+\hypertarget{fbodygyro-meanfreq-y}{%
+\paragraph{fBodyGyro-meanFreq-Y}\label{fbodygyro-meanfreq-y}}
+
+\hypertarget{fbodygyro-meanfreq-z}{%
+\paragraph{fBodyGyro-meanFreq-Z}\label{fbodygyro-meanfreq-z}}
+
+\hypertarget{fbodyaccmag-mean}{%
+\paragraph{fBodyAccMag-mean()}\label{fbodyaccmag-mean}}
+
+\hypertarget{fbodyaccmag-std}{%
+\paragraph{fBodyAccMag-std()}\label{fbodyaccmag-std}}
+
+\hypertarget{fbodyaccmag-meanfreq}{%
+\paragraph{fBodyAccMag-meanFreq()}\label{fbodyaccmag-meanfreq}}
+
+\hypertarget{fbodybodyaccjerkmag-mean}{%
+\paragraph{fBodyBodyAccJerkMag-mean()}\label{fbodybodyaccjerkmag-mean}}
+
+\hypertarget{fbodybodyaccjerkmag-std}{%
+\paragraph{fBodyBodyAccJerkMag-std()}\label{fbodybodyaccjerkmag-std}}
+
+\hypertarget{fbodybodyaccjerkmag-meanfreq}{%
+\paragraph{fBodyBodyAccJerkMag-meanFreq()}\label{fbodybodyaccjerkmag-meanfreq}}
+
+\hypertarget{fbodybodygyromag-mean}{%
+\paragraph{fBodyBodyGyroMag-mean()}\label{fbodybodygyromag-mean}}
+
+\hypertarget{fbodybodygyromag-std}{%
+\paragraph{fBodyBodyGyroMag-std()}\label{fbodybodygyromag-std}}
+
+\hypertarget{fbodybodygyromag-meanfreq}{%
+\paragraph{fBodyBodyGyroMag-meanFreq()}\label{fbodybodygyromag-meanfreq}}
+
+\hypertarget{fbodybodygyrojerkmag-mean}{%
+\paragraph{fBodyBodyGyroJerkMag-mean()}\label{fbodybodygyrojerkmag-mean}}
+
+\hypertarget{fbodybodygyrojerkmag-std}{%
+\paragraph{fBodyBodyGyroJerkMag-std()}\label{fbodybodygyrojerkmag-std}}
+
+\hypertarget{fbodybodygyrojerkmag-meanfreq}{%
+\paragraph{\texorpdfstring{fBodyBodyGyroJerkMag-meanFreq()}{fBodyBodyGyroJerkMag-meanFreq()    }}\label{fbodybodygyrojerkmag-meanfreq}}
+
+\hypertarget{by_activity_subject.csv}{%
+\subsection{\texorpdfstring{by\_activity\_subject.csv}{by\_activity\_subject.csv  }}\label{by_activity_subject.csv}}
+
+This data is grouped by 6 activities that subjects performed, and 30
+subjects. So the mean and values of each variables(i.e.~`activity',
+`subject', `tBodyAcc-mean-X'\ldots) are same in `mean\_and\_std.csv'
+except that in `by\_activity\_subject.csv' the values of variables from
+`tBodyAcc-mean-X' to `fBodyBodyGyroJerkMag-meanFreq()' is the average of
+that value for each activity and each subject.
+
+\end{document}
